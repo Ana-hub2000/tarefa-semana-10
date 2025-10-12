@@ -1,0 +1,178 @@
+/* Reset básico */
+body {
+    font-family: 'Georgia', serif;  
+    background-color: #FFF8E7;      
+    color: #3E2C1C;                  
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #FF0000; /* vermelho vivo */
+    color: #FFF8E7;             
+    text-align: center;         
+    padding: 40px 20px;
+    /* Removemos a linha verde */
+    border-bottom: none;  
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; 
+}
+
+/* Título do header */
+header h1 {
+    font-family: 'Brush Script MT', cursive; 
+    font-size: 3em;
+    margin: 0 0 10px 0;
+    text-shadow: 2px 2px 4px #000000; 
+}
+
+/* Subtítulo do header */
+header p {
+    font-size: 1.2em;
+    margin: 0;
+    font-style: italic;
+    text-shadow: 1px 1px 2px #000000; 
+}
+
+/* Nav */
+nav {
+    background: linear-gradient(90deg, #27AE60, #145A32); /* verde claro → verde escuro */
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Faz a lista do nav ficar em linha */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;           /* alinhamento em linha */
+    justify-content: center; /* centraliza os itens */
+    gap: 20px;               /* espaçamento entre os itens */
+}
+
+nav ul li a {
+    color: #FFF8E7;           
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Georgia', serif;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #F1C40F; 
+    text-decoration: underline;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.5); 
+}
+
+/* Article */
+article {
+    column-count: 3;        
+    column-gap: 20px;       
+    padding: 30px;          
+}
+
+article > div {
+    break-inside: avoid;    
+    column-span: 2;         
+    margin-bottom: 20px;  
+    background-color: #FAE5D3; 
+    border: 2px solid #FF0000; 
+    padding: 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Efeito hover no article */
+article > div:hover {
+    transform: scale(1.03);
+    filter: brightness(0.95);
+}
+
+/* Imagens */
+article > div img {
+    width: 100%;            
+    height: auto;           
+    display: block;       
+    margin-bottom: 10px;    
+}
+
+main img {
+    height: 400px;    
+    width: auto;      
+    display: block;
+    padding: 20px;   
+    margin: 0 auto 10px auto; 
+}
+
+main {
+    text-align: center;
+}
+
+/* Footer menor */
+footer {
+    background-color: #FF0000;
+    color: #FFF8E7;
+    text-align: center;
+    padding: 10px 5px; /* menor padding */
+    font-family: 'Georgia', serif;
+}
+
+footer a {
+    color: #27AE60;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Article títulos */
+article h2 {
+    font-family: 'Brush Script MT', cursive; 
+    text-decoration: underline;              
+    color: #FF0000;                        
+    text-align: center;                       
+    font-size: 2.2em;                        
+    margin-bottom: 20px;                      
+}
+
+
+
+article {
+    display: flex;          /* transforma em flex container */
+    flex-wrap: wrap;        /* permite que os itens quebrem linha */
+    justify-content: space-between; /* distribui espaço entre os itens */
+    gap: 20px;              /* espaço entre os artigos */
+    padding: 30px;
+}
+
+article > div {
+    flex: 1 1 calc(33% - 20px); /* 3 colunas (aproximadamente 33% cada) */
+    margin-bottom: 20px;
+    background-color: #FAE5D3;
+    border: 2px solid #FF0000;
+    padding: 15px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+article > div:hover {
+    transform: scale(1.03);
+    filter: brightness(0.95);
+}
+
+section > img {
+    width: 50%;         
+    height: auto;        
+    display: block;      
+    margin: 0 auto;      
+    padding: 10px 0;     
+}
+
+section > h2 {
+    font-family: 'Brush Script MT', cursive; 
+    text-decoration: underline;              
+    color: #FF0000;                        
+    text-align: center;                       
+    font-size: 4.2em;                        
+    margin-bottom: 20px;                      
+}
