@@ -285,7 +285,7 @@ if (detalheContainer) {
     if (receita) {
       detalheContainer.innerHTML = `
         <h2>${receita.nome}</h2>
-        <img src="${receita.imagem}" alt="${receita.nome}">
+        <img class="detalhe" src="${receita.imagem}" alt="${receita.nome}">
         <p><strong>Descrição:</strong> ${receita.descricao}</p>
         <p><strong>História:</strong> ${receita.historia}</p>
         <p><strong>Indicação de Consumo:</strong> ${receita.indicacao}</p>
@@ -319,9 +319,10 @@ receitas.forEach((receita, index) => {
   if (index === 0) item.classList.add("active");
 
   item.innerHTML = `
+
     <img src="${receita.imagem}" class="d-block w-100" alt="${receita.titulo}">
     <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
-      <h5>${receita.titulo}</h5>
+      <h5>${receita.nome}</h5>
       <p>${receita.descricao}</p>
     </div>
   `;
