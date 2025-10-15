@@ -124,6 +124,129 @@ const receitas = [
       "Adicione óleo, sal e farinha.",
       "Sove, deixe crescer e asse a 200°C por 25-35min."
     ]
+  },
+   {
+    id: 7,
+    nome: "Panqueca de Frango",
+    imagem: "img/panqueca de frango.jpeg",
+    descricao: "Uma refeição prática e deliciosa, perfeita para o almoço.",
+    historia: "A panqueca se popularizou no Brasil por sua versatilidade e recheios variados.",
+    indicacao: "Ideal para refeições rápidas e nutritivas.",
+    ingredientes: [
+      "2 ovos",
+      "1 xícara de leite",
+      "1 xícara de farinha de trigo",
+      "1 pitada de sal",
+      "1 colher (sopa) de óleo",
+      "Recheio: frango desfiado, molho de tomate e temperos"
+    ],
+    modoPreparo: [
+      "Bata os ingredientes da massa no liquidificador.",
+      "Prepare as panquecas em uma frigideira antiaderente.",
+      "Recheie, enrole e leve ao forno com molho por 10 minutos."
+    ]
+  },
+  {
+    id: 8,
+    nome: "Coxinha Tradicional",
+    imagem: "img/coxinha.jpeg",
+    descricao: "O salgado mais amado do Brasil!",
+    historia: "Criada no século XIX, a coxinha virou símbolo da culinária popular brasileira.",
+    indicacao: "Perfeita para festas e lanches.",
+    ingredientes: [
+      "500g de peito de frango cozido e desfiado",
+      "2 xícaras de caldo do cozimento",
+      "2 xícaras de farinha de trigo",
+      "1 colher de manteiga",
+      "Farinha de rosca e ovos para empanar"
+    ],
+    modoPreparo: [
+      "Refogue o frango com temperos.",
+      "Ferva o caldo e adicione a farinha até desgrudar da panela.",
+      "Modele, empane e frite até dourar."
+    ]
+  },
+  {
+    id: 9,
+    nome: "Cookie",
+    imagem: "img/cookie.jpeg",
+    descricao: "Crosta crocante, interior macio e sabor irresistível!",
+    historia: "Originado nos EUA, o cookie é hoje um clássico da confeitaria mundial.",
+    indicacao: "Perfeito para acompanhar um café ou lanche da tarde.",
+    ingredientes: [
+      "2 xícaras de farinha de trigo",
+      "1/2 colher de fermento",
+      "1/2 colher de sal",
+      "1 xícara de manteiga",
+      "1 xícara de açúcar mascavo",
+      "1 ovo",
+      "1 xícara de gotas de chocolate"
+    ],
+    modoPreparo: [
+      "Misture os secos e adicione manteiga, ovo e chocolate.",
+      "Modele pequenas bolinhas.",
+      "Asse a 180°C por 10-12 minutos."
+    ]
+  },
+  {
+    id: 10,
+    nome: "Bolo de Cenoura",
+    imagem: "img/bolo de cenoura.jpeg",
+    descricao: "Um clássico dos cafés da tarde brasileiros.",
+    historia: "Surgiu no Brasil adaptando receitas europeias com o toque tropical da cenoura.",
+    indicacao: "Ideal para acompanhar o café da manhã.",
+    ingredientes: [
+      "3 cenouras médias",
+      "3 ovos",
+      "1 xícara de óleo",
+      "2 xícaras de açúcar",
+      "2 e 1/2 xícaras de farinha de trigo",
+      "1 colher de fermento"
+    ],
+    modoPreparo: [
+      "Bata cenoura, ovos e óleo no liquidificador.",
+      "Misture o restante dos ingredientes.",
+      "Asse por 40 minutos a 180°C e finalize com cobertura de chocolate."
+    ]
+  },
+  {
+    id: 11,
+    nome: "Brigadeiro Gourmet",
+    imagem: "img/brigadeir.jpeg",
+    descricao: "O doce brasileiro mais famoso, em versão cremosa e intensa!",
+    historia: "Criado nos anos 40, tornou-se símbolo das festas no Brasil.",
+    indicacao: "Perfeito para sobremesas e comemorações.",
+    ingredientes: [
+      "1 lata de leite condensado",
+      "2 colheres de chocolate em pó",
+      "1 colher de manteiga",
+      "Granulado para enrolar"
+    ],
+    modoPreparo: [
+      "Misture tudo em fogo baixo.",
+      "Cozinhe até soltar do fundo da panela.",
+      "Enrole e passe no granulado."
+    ]
+  },
+  {
+    id: 12,
+    nome: "Lasanha à Bolonhesa",
+    imagem: "img/lasanha.jpeg",
+    descricao: "Camadas de sabor e conforto em um prato tradicional.",
+    historia: "Inspirada na culinária italiana, é sucesso nas mesas brasileiras.",
+    indicacao: "Prato principal para almoços de domingo.",
+    ingredientes: [
+      "500g de massa para lasanha",
+      "400g de carne moída",
+      "2 xícaras de molho de tomate",
+      "200g de presunto",
+      "200g de queijo mussarela",
+      "Orégano a gosto"
+    ],
+    modoPreparo: [
+      "Monte as camadas alternando massa, molho, carne e queijo.",
+      "Finalize com queijo por cima e leve ao forno até gratinar."
+    ]
   }
 ];
 
@@ -176,3 +299,32 @@ if (detalheContainer) {
     }
   }
 }
+// Seleciona onde o conteúdo será inserido
+const carouselInner = document.getElementById("carousel-inner");
+const carouselIndicators = document.getElementById("carousel-indicators");
+
+// Gera dinamicamente os slides e indicadores
+receitas.forEach((receita, index) => {
+  // Cria o indicador (os botõezinhos abaixo)
+  const indicador = document.createElement("button");
+  indicador.type = "button";
+  indicador.setAttribute("data-bs-target", "#carouselExampleCaptions");
+  indicador.setAttribute("data-bs-slide-to", index);
+  if (index === 0) indicador.classList.add("active");
+  carouselIndicators.appendChild(indicador);
+
+  // Cria o item do carrossel
+  const item = document.createElement("div");
+  item.classList.add("carousel-item");
+  if (index === 0) item.classList.add("active");
+
+  item.innerHTML = `
+    <img src="${receita.imagem}" class="d-block w-100" alt="${receita.titulo}">
+    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+      <h5>${receita.titulo}</h5>
+      <p>${receita.descricao}</p>
+    </div>
+  `;
+
+  carouselInner.appendChild(item);
+});
