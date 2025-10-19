@@ -284,14 +284,15 @@ if (detalheContainer) {
 
     if (receita) {
       detalheContainer.innerHTML = `
-        <h2>${receita.nome}</h2>
-        <img src="${receita.imagem}" alt="${receita.nome}">
-        <p><strong>Descrição:</strong> ${receita.descricao}</p>
-        <p><strong>História:</strong> ${receita.historia}</p>
-        <p><strong>Indicação de Consumo:</strong> ${receita.indicacao}</p>
-        <p><strong>Ingredientes:</strong> ${receita.ingredientes}</p>
-        <p><strong>Como preparar:</strong> ${receita.modoPreparo}</p>
-  
+  <img class="detalhe" src="${receita.imagem}" alt="${receita.nome}">
+  <div class="texto-detalhe">
+    <h2>${receita.nome}</h2>
+    <p class="detalhe"><strong>Descrição:</strong> ${receita.descricao}</p>
+    <p class="detalhe"><strong>História:</strong> ${receita.historia}</p>
+    <p class="detalhe"><strong>Indicação de Consumo:</strong> ${receita.indicacao}</p>
+    <p class="detalhe"><strong>Ingredientes:</strong> ${receita.ingredientes}</p>
+    <p class="detalhe"><strong>Como preparar:</strong> ${receita.modoPreparo}</p>
+  </div>
     
       `;
     } else {

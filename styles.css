@@ -379,3 +379,41 @@ footer a:hover {
     font-size: 2.4em;
   }
 }
+/* Container principal do detalhamento */
+#detalhamento {
+  display: flex; /* coloca imagem e texto lado a lado */
+  align-items: flex-start;
+  gap: 25px; /* espaço entre a imagem e os textos */
+  padding: 20px;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  background-color: #fff8f0;
+  max-width: 900px;
+  margin: 40px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagem à esquerda */
+#detalhamento img.detalhe {
+  width: 300px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  display: inline-block;
+}
+
+/* Área de texto à direita */
+#detalhamento .texto-detalhe {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1; /* ocupa o restante do espaço */
+}
+
+/* Estilo dos parágrafos */
+#detalhamento p.detalhe {
+  margin: 8px 0;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #333;
+}
