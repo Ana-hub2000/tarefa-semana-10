@@ -3,7 +3,7 @@
 ========================= */
 body {
   font-family: 'Georgia', serif;
-  background-color: #fffdf8; /* tom neutro suave */
+  background-color: #fffdf8;
   color: #3e2c1c;
   margin: 0;
   padding: 0;
@@ -29,13 +29,13 @@ header img {
   height: 160px;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid #006400; /* verde escuro */
+  border: 3px solid #006400;
 }
 
 header h1 {
   font-family: 'Brush Script MT', cursive;
   font-size: 2.8rem;
-  color: #b22222; /* vermelho elegante */
+  color: #b22222;
   margin: 0;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
@@ -64,7 +64,7 @@ header p {
    NAVEGAÇÃO
 ========================= */
 nav {
-  background: linear-gradient(90deg, #006400, #2ecc71); /* verde bandeira */
+  background: linear-gradient(90deg, #006400, #2ecc71);
   padding: 15px 0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
@@ -105,7 +105,7 @@ article {
 }
 
 article > div {
-  flex: 1 1 calc(25% - 20px); /* 4 colunas */
+  flex: 1 1 calc(25% - 20px);
   background-color: #fff6ef;
   border: 2px solid #b22222;
   border-radius: 12px;
@@ -122,7 +122,6 @@ article > div:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* Títulos das receitas */
 article h2 {
   font-family: 'Brush Script MT', cursive;
   text-decoration: underline;
@@ -132,7 +131,6 @@ article h2 {
   margin-bottom: 15px;
 }
 
-/* Imagens */
 article > div img {
   width: 100%;
   height: 30%;
@@ -146,11 +144,13 @@ article > div img {
     flex: 1 1 calc(33.33% - 20px);
   }
 }
+
 @media (max-width: 768px) {
   article > div {
     flex: 1 1 calc(50% - 20px);
   }
 }
+
 @media (max-width: 480px) {
   article > div {
     flex: 1 1 100%;
@@ -247,56 +247,59 @@ footer a {
   text-decoration: none;
   font-weight: bold;
 }
+
 footer a:hover {
   text-decoration: underline;
 }
-/* Container do carrossel */
+
+/* =========================
+   CARROSSEL
+========================= */
 #carouselExampleCaptions {
-  width: 60%;              /* ✅ ocupa 60% da largura da página */
-  margin: 40px auto;        /* centraliza e adiciona espaçamento vertical */
-  border-radius: 20px;      /* cantos arredondados */
-  overflow: hidden;         /* corta o excesso das imagens */
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* leve sombra */
-  background-color: #fffdf6; /* fundo creme */
+  width: 60%;
+  margin: 40px auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  background-color: #fffdf6;
   padding: 10px;
   transition: transform 0.3s ease;
 }
 
 #carouselExampleCaptions:hover {
-  transform: scale(1.02); /* efeito leve ao passar o mouse */
+  transform: scale(1.02);
 }
 
-/* Reduz também o tamanho das imagens */
 #carouselExampleCaptions img {
   width: 100%;
   height: 30%;
   border-radius: 16px;
 }
 
-/* Ajusta os botões de navegação */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-color: rgba(184, 78, 42, 0.7); /* vermelho vinho semitransparente */
+  background-color: rgba(184, 78, 42, 0.7);
   border-radius: 50%;
   width: 40px;
   height: 40px;
 }
 
-/* Indicadores (as bolinhas) */
 .carousel-indicators [data-bs-target] {
-  background-color: #b84e2a; /* vinho */
+  background-color: #b84e2a;
   width: 10px;
   height: 10px;
   border-radius: 50%;
 }
 
-/* Responsivo — carrossel maior em telas pequenas */
 @media (max-width: 768px) {
   #carouselExampleCaptions {
     width: 90%;
   }
 }
-/* ===== HEADER PRINCIPAL ===== */
+
+/* =========================
+   HEADER PRINCIPAL
+========================= */
 .site-header {
   background: linear-gradient(135deg, #fff7f2, #ffe3d3);
   padding: 40px 20px;
@@ -304,7 +307,6 @@ footer a:hover {
   font-family: 'Poppins', sans-serif;
 }
 
-/* container flexível */
 .header-container {
   display: flex;
   align-items: center;
@@ -315,14 +317,13 @@ footer a:hover {
   flex-wrap: wrap;
 }
 
-/* ===== LADO ESQUERDO: IMAGEM ===== */
 .header-left img {
   width: 180px;
   height: 180px;
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid #b84e2a;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
 }
 
@@ -330,7 +331,6 @@ footer a:hover {
   transform: scale(1.05);
 }
 
-/* ===== LADO DIREITO: TEXTOS ===== */
 .header-right {
   max-width: 650px;
 }
@@ -340,7 +340,7 @@ footer a:hover {
   color: #b84e2a;
   font-size: 3em;
   margin-bottom: 10px;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .header-right .slogan {
@@ -363,7 +363,6 @@ footer a:hover {
   margin-bottom: 10px;
 }
 
-/* ===== RESPONSIVO ===== */
 @media (max-width: 768px) {
   .header-container {
     flex-direction: column;
@@ -379,11 +378,14 @@ footer a:hover {
     font-size: 2.4em;
   }
 }
-/* Container principal do detalhamento */
+
+/* =========================
+   DETALHAMENTO
+========================= */
 #detalhamento {
-  display: flex; /* coloca imagem e texto lado a lado */
+  display: flex;
   align-items: flex-start;
-  gap: 25px; /* espaço entre a imagem e os textos */
+  gap: 25px;
   padding: 20px;
   border: 2px solid #ddd;
   border-radius: 12px;
@@ -393,7 +395,6 @@ footer a:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Imagem à esquerda */
 #detalhamento img.detalhe {
   width: 300px;
   height: auto;
@@ -402,15 +403,13 @@ footer a:hover {
   display: inline-block;
 }
 
-/* Área de texto à direita */
 #detalhamento .texto-detalhe {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  flex: 1; /* ocupa o restante do espaço */
+  flex: 1;
 }
 
-/* Estilo dos parágrafos */
 #detalhamento p.detalhe {
   margin: 8px 0;
   line-height: 1.6;
