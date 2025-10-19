@@ -284,6 +284,7 @@ if (detalheContainer) {
 
     if (receita) {
       detalheContainer.innerHTML = `
+<<<<<<< HEAD
   <img class="detalhe" src="${receita.imagem}" alt="${receita.nome}">
   <div class="texto-detalhe">
     <h2>${receita.nome}</h2>
@@ -293,6 +294,16 @@ if (detalheContainer) {
     <p class="detalhe"><strong>Ingredientes:</strong> ${receita.ingredientes}</p>
     <p class="detalhe"><strong>Como preparar:</strong> ${receita.modoPreparo}</p>
   </div>
+=======
+        <h2>${receita.nome}</h2>
+        <img class="detalhe" src="${receita.imagem}" alt="${receita.nome}">
+        <p><strong>Descrição:</strong> ${receita.descricao}</p>
+        <p><strong>História:</strong> ${receita.historia}</p>
+        <p><strong>Indicação de Consumo:</strong> ${receita.indicacao}</p>
+        <p><strong>Ingredientes:</strong> ${receita.ingredientes}</p>
+        <p><strong>Como preparar:</strong> ${receita.modoPreparo}</p>
+  
+>>>>>>> d9a418148191fa8134b3ee28a4c67b3ed531485b
     
       `;
     } else {
@@ -320,9 +331,10 @@ receitas.forEach((receita, index) => {
   if (index === 0) item.classList.add("active");
 
   item.innerHTML = `
+
     <img src="${receita.imagem}" class="d-block w-100" alt="${receita.titulo}">
     <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
-      <h5>${receita.titulo}</h5>
+      <h5>${receita.nome}</h5>
       <p>${receita.descricao}</p>
     </div>
   `;
