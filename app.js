@@ -66,9 +66,9 @@ const receitas = [
     id: 4,
     nome: "Bolo de Fubá",
     imagem: "img/bolo de fuba.jpeg",
-    descricao: "Herança da culinária caipira com sabor caseiro.",
-    historia: "Feito a partir do milho, é símbolo das festas juninas e da cozinha do interior.",
-    indicacao: "Ideal para cafés da tarde e encontros em família.",
+    descricao: "Herança da culinária caipira com sabor caseiro",
+    historia: "Feito a partir do milho, é símbolo das festas juninas e da cozinha do interior",
+    indicacao: "Ideal para cafés da tarde e encontros em família",
     ingredientes: [
       "3 ovos",
       "1 xícara de açúcar",
@@ -79,9 +79,9 @@ const receitas = [
       "1 colher de sopa fermento"
     ],
     modoPreparo: [
-      "Bata ovos, açúcar e óleo.",
-      "Adicione leite, fubá e farinha.",
-      "Incorpore fermento e asse a 180°C por 35-40min."
+      "Bata ovos, açúcar e óleo",
+      "Adicione leite, fubá e farinha",
+      "Incorpore fermento e asse a 180°C por 35-40min"
     ]
   },
   {
@@ -99,9 +99,9 @@ const receitas = [
       "1 colher de manteiga"
     ],
     modoPreparo: [
-      "Estoure o milho no óleo.",
-      "Adicione manteiga e açúcar.",
-      "Finalize com leite Ninho."
+      "Estoure o milho no óleo",
+      "Adicione manteiga e açúcar",
+      "Finalize com leite Ninho"
     ]
   },
   {
@@ -284,7 +284,7 @@ if (detalheContainer) {
 
     if (receita) {
       detalheContainer.innerHTML = `
-<<<<<<< HEAD
+
   <img class="detalhe" src="${receita.imagem}" alt="${receita.nome}">
   <div class="texto-detalhe">
     <h2>${receita.nome}</h2>
@@ -294,16 +294,7 @@ if (detalheContainer) {
     <p class="detalhe"><strong>Ingredientes:</strong> ${receita.ingredientes}</p>
     <p class="detalhe"><strong>Como preparar:</strong> ${receita.modoPreparo}</p>
   </div>
-=======
-        <h2>${receita.nome}</h2>
-        <img class="detalhe" src="${receita.imagem}" alt="${receita.nome}">
-        <p><strong>Descrição:</strong> ${receita.descricao}</p>
-        <p><strong>História:</strong> ${receita.historia}</p>
-        <p><strong>Indicação de Consumo:</strong> ${receita.indicacao}</p>
-        <p><strong>Ingredientes:</strong> ${receita.ingredientes}</p>
-        <p><strong>Como preparar:</strong> ${receita.modoPreparo}</p>
-  
->>>>>>> d9a418148191fa8134b3ee28a4c67b3ed531485b
+
     
       `;
     } else {
