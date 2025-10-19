@@ -320,15 +320,15 @@ receitas.forEach((receita, index) => {
   const item = document.createElement("div");
   item.classList.add("carousel-item");
   if (index === 0) item.classList.add("active");
-
-  item.innerHTML = `
-
-    <img src="${receita.imagem}" class="d-block w-100" alt="${receita.titulo}">
-    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
-      <h5>${receita.nome}</h5>
-      <p>${receita.descricao}</p>
-    </div>
-  `;
+item.innerHTML = `
+  <a href="detalhe.html?id=${receita.id}">
+    <img src="${receita.imagem}" class="d-block w-100" alt="${receita.nome}">
+  </a>
+  <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+    <h5>${receita.nome}</h5>
+    <p>${receita.descricao}</p>
+  </div>
+`;
 
   carouselInner.appendChild(item);
 });
